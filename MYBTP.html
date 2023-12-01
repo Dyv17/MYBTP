@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MYBTP - Travaux BTP. Spécialisés dans la rénovation intérieure et extérieure ainsi que la sous-traitance de travaux pour les sociétés tierces. Contactez-nous pour vos projets.">
+    <meta name="keywords" content="MYBTP, Travaux BTP, Rénovation, Sous-Traitance, Bâtiment, Rénovation Intérieure, Rénovation Extérieure">
+    <meta name="author" content="MENTENON">
+    <title>MYBTP - Travaux BTP</title>
+    <style>
+        body {
+            background-color: #cfe2f3;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-box {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border: 2px solid #ff0000;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        section {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>MYBTP - Travaux BTP</h1>
+    </header>
+
+    <!-- Boîte de contact -->
+    <div class="contact-box">
+        <p>Email : <a href="mailto:nosdevis2024@gmail.com">nosdevis2024@gmail.com</a></p>
+        <p>Téléphone : <a href="tel:0622808403">0622808403</a></p>
+    </div>
+
+    <section>
+        <h2>Nos Travaux</h2>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="C:\Users\cobay\Downloads\istockphoto-1158040145-612x612.jpg" alt="Travail 1">
+                <p>Rénovation BTP Intérieure et Extérieure : Nous sommes spécialisés dans la rénovation complète de vos espaces, que ce soit à l'intérieur de votre maison ou à l'extérieur. De la rénovation des sols et des murs à l'amélioration de l'esthétique extérieure, nous vous offrons des solutions personnalisées pour répondre à vos besoins.</p>
+            </div>
+            <div class="mySlides">
+                <img src="C:\Users\cobay\Downloads\istockphoto-1130317252-612x612.jpg" alt="Travail 2">
+                <p>Sous-Traitance de Travaux pour les Sociétés Tiers : MYBTP propose des services de sous-traitance pour les sociétés tierces dans le secteur du BTP. Nous collaborons avec des entreprises pour fournir des services spécialisés, du travail manuel à la gestion de projets, assurant une exécution efficace et de qualité.</p>
+            </div>
+            <!-- Ajoutez plus d'éléments de travail selon vos besoins -->
+        </div>
+    </section>
+
+    <form action="/submit_form" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="tel">Téléphone :</label>
+        <input type="tel" id="tel" name="tel" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse" required>
+
+        <label for="description">Description des travaux :</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <footer>
+        <p>Contactez-nous pour vos projets de travaux BTP.</p>
+    </footer>
+
+    <script>
+        // Script pour le diaporama
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Changez la durée ici (en millisecondes)
+        }
+    </script>
+</body>
+
+</html>
+
